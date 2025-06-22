@@ -23,7 +23,7 @@
         
         <div class="schedule-wrapper">
             <div class="schedule-grid">
-                <!-- วันจันทร์ -->
+                
                 <div class="day-section" data-day="monday">
                     <div class="day-header">
                         <i class="fas fa-calendar-day day-icon"></i>
@@ -102,7 +102,7 @@
                 </div>
                 
 
-                <!-- วันอังคาร -->
+               
                 <div class="day-section" data-day="tuesday">
                     <div class="day-header">
                         <i class="fas fa-calendar-day day-icon"></i>
@@ -128,7 +128,7 @@
                     </div>
                 </div>
 
-                <!-- วันพุธ -->
+               
                 <div class="day-section" data-day="wednesday">
                     <div class="day-header">
                         <i class="fas fa-calendar-day day-icon"></i>
@@ -155,7 +155,7 @@
                     </div>
                 </div>
 
-                <!-- วันพฤหัสบดี -->
+               
                 <div class="day-section" data-day="thursday">
                     <div class="day-header">
                         <i class="fas fa-calendar-day day-icon"></i>
@@ -199,7 +199,7 @@
                     </div>
                 </div>
 
-                <!-- วันศุกร์ -->
+                
                 <div class="day-section" data-day="friday">
                     <div class="day-header">
                         <i class="fas fa-calendar-day day-icon"></i>
@@ -263,7 +263,7 @@
     </div>
 
     <script>
-        // Add floating animation on load
+       
         document.addEventListener('DOMContentLoaded', function() {
             const daySection = document.querySelectorAll('.day-section');
             
@@ -272,18 +272,18 @@
                 section.classList.add('fade-in-up');
             });
 
-            // Add click ripple effect
+            
             const subjects = document.querySelectorAll('.subject');
             subjects.forEach(subject => {
                 subject.addEventListener('click', function(e) {
-                    // Check if subject has a link
+                 
                     const link = this.getAttribute('data-link');
                     if (link && link.trim() !== '') {
                         window.open(link, '_blank');
                         return;
                     }
 
-                    // Add ripple effect for non-clickable subjects
+                 
                     const ripple = document.createElement('span');
                     const rect = this.getBoundingClientRect();
                     const size = Math.max(rect.width, rect.height);
@@ -304,7 +304,7 @@
             });
         });
 
-        // Add pulse animation to current day
+      
         const today = new Date().getDay();
         const dayMap = {
             1: 'monday',
