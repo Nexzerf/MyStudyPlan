@@ -1,0 +1,16 @@
+{
+  "name": "MMIT Study Plan",
+  "short_name": "Study Plan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/apple.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
