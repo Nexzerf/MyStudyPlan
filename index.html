@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
+        
         <header class="header">
             <div class="header-content">
                 <div class="logo-section">
@@ -29,7 +29,7 @@
             </div>
         </header>
 
-        <!-- Quick Navigation -->
+        
         <nav class="quick-nav">
             <button class="nav-btn active" data-view="week">
                 <i class="fas fa-calendar-week"></i>
@@ -45,12 +45,12 @@
             </button>
         </nav>
 
-        <!-- Schedule Container -->
+       
         <main class="schedule-container">
-            <!-- Week View -->
+           
             <div class="schedule-view week-view active" id="weekView">
                 <div class="schedule-grid">
-                    <!-- Monday -->
+                   
                     <div class="day-card" data-day="monday">
                         <div class="day-header">
                             <div class="day-info">
@@ -131,7 +131,7 @@
                         </div>
                     </div>
 
-                    <!-- Tuesday -->
+               
                     <div class="day-card" data-day="tuesday">
                         <div class="day-header">
                             <div class="day-info">
@@ -160,7 +160,6 @@
                         </div>
                     </div>
 
-                    <!-- Wednesday -->
                     <div class="day-card" data-day="wednesday">
                         <div class="day-header">
                             <div class="day-info">
@@ -190,7 +189,7 @@
                         </div>
                     </div>
 
-                    <!-- Thursday -->
+                    
                     <div class="day-card" data-day="thursday">
                         <div class="day-header">
                             <div class="day-info">
@@ -237,7 +236,7 @@
                         </div>
                     </div>
 
-                    <!-- Friday -->
+                   
                     <div class="day-card" data-day="friday">
                         <div class="day-header">
                             <div class="day-info">
@@ -302,7 +301,7 @@
                 </div>
             </div>
 
-            <!-- Today View -->
+           
             <div class="schedule-view today-view" id="todayView">
                 <div class="today-container">
                     <div class="today-header">
@@ -310,12 +309,12 @@
                         <p id="todayDate">Loading...</p>
                     </div>
                     <div class="today-classes" id="todayClasses">
-                        <!-- Today's classes will be populated by JavaScript -->
+                      
                     </div>
                 </div>
             </div>
 
-            <!-- List View -->
+            
             <div class="schedule-view list-view" id="listView">
                 <div class="list-container">
                     <div class="subject-summary">
@@ -371,7 +370,7 @@
     </div>
 
     <script>
-        // Current time and day display
+    
         function updateCurrentTime() {
             const now = new Date();
             const timeString = now.toLocaleTimeString('th-TH', { 
@@ -385,7 +384,7 @@
             document.getElementById('currentDay').textContent = dayString;
         }
 
-        // Update current day indicator
+        
         function updateCurrentDayIndicator() {
             const today = new Date().getDay();
             const dayMap = {
@@ -396,12 +395,12 @@
                 5: 'friday'
             };
 
-            // Remove previous current day classes
+           
             document.querySelectorAll('.day-card').forEach(card => {
                 card.classList.remove('current-day');
             });
 
-            // Add current day class
+          
             if (dayMap[today]) {
                 const currentDayCard = document.querySelector(`[data-day="${dayMap[today]}"]`);
                 if (currentDayCard) {
@@ -410,7 +409,6 @@
             }
         }
 
-        // Navigation functionality
         function initializeNavigation() {
             const navButtons = document.querySelectorAll('.nav-btn');
             const scheduleViews = document.querySelectorAll('.schedule-view');
@@ -419,15 +417,15 @@
                 btn.addEventListener('click', () => {
                     const targetView = btn.getAttribute('data-view');
                     
-                    // Update active button
+                    
                     navButtons.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
                     
-                    // Update active view
+                   
                     scheduleViews.forEach(view => view.classList.remove('active'));
                     document.getElementById(targetView + 'View').classList.add('active');
                     
-                    // Special handling for today view
+                  
                     if (targetView === 'today') {
                         updateTodayView();
                     }
@@ -435,7 +433,7 @@
             });
         }
 
-        // Update today view
+        
         function updateTodayView() {
             const today = new Date();
             const dayMap = {
@@ -472,7 +470,7 @@
             }
         }
 
-        // Click handlers for subjects
+        
         function initializeClickHandlers() {
             document.addEventListener('click', (e) => {
                 const clickableSubject = e.target.closest('.subject.clickable');
@@ -485,7 +483,7 @@
             });
         }
 
-        // Touch feedback for mobile
+        
         function initializeTouchFeedback() {
             document.querySelectorAll('.subject, .nav-btn').forEach(element => {
                 element.addEventListener('touchstart', function() {
@@ -498,7 +496,7 @@
             });
         }
 
-        // Initialize everything
+       
         document.addEventListener('DOMContentLoaded', function() {
             updateCurrentTime();
             updateCurrentDayIndicator();
@@ -506,14 +504,14 @@
             initializeClickHandlers();
             initializeTouchFeedback();
             
-            // Update time every minute
+         
             setInterval(updateCurrentTime, 60000);
             
-            // Update current day at midnight
+           
             setInterval(updateCurrentDayIndicator, 60000);
         });
 
-        // Service Worker registration for PWA capabilities
+       
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/sw.js').then(function(registration) {
