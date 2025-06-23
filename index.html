@@ -160,7 +160,7 @@
                                     <div class="subject-info">
                                         <i class="fas fa-database"></i>
                                         <div>
-                                            <h4>Information System for Organization</h4>
+                                            <h4>Information System for Organization Management</h4>
                                             <span class="code">954100 (002-000)</span>
                                         </div>
                                     </div>
@@ -265,7 +265,7 @@
                                     <div class="subject-info">
                                         <i class="fas fa-database"></i>
                                         <div>
-                                            <h4>Information System for Organization</h4>
+                                            <h4>Information System for Organization Management</h4>
                                             <span class="code">954100 (002-000)</span>
                                         </div>
                                     </div>
@@ -282,7 +282,7 @@
                                     <div class="subject-info">
                                         <i class="fas fa-code"></i>
                                         <div>
-                                            <h4>Fundamental Computer Programming</h4>
+                                            <h4>Fundamental Computer Programming for Modern Management</h4>
                                             <span class="code">954142 (002-000)</span>
                                         </div>
                                     </div>
@@ -299,7 +299,7 @@
                                     <div class="subject-info">
                                         <i class="fas fa-code"></i>
                                         <div>
-                                            <h4>Fundamental Computer Programming</h4>
+                                            <h4>Fundamental Computer Programming for Modern Management</h4>
                                             <span class="code">954142 (002-000)</span>
                                         </div>
                                     </div>
@@ -357,7 +357,7 @@
                             <div class="summary-item info-system">
                                 <i class="fas fa-database"></i>
                                 <div>
-                                    <h4>Information System for Organization</h4>
+                                    <h4>Information System for Organization Management</h4>
                                     <span>954100 • อังคาร, ศุกร์ 11:00-12:30</span>
                                 </div>
                             </div>
@@ -371,7 +371,7 @@
                             <div class="summary-item programming">
                                 <i class="fas fa-code"></i>
                                 <div>
-                                    <h4>Fundamental Computer Programming</h4>
+                                    <h4>Fundamental Computer Programming for Modern Management</h4>
                                     <span>954142 • ศุกร์ 13:00-17:00</span>
                                 </div>
                             </div>
@@ -380,39 +380,36 @@
                 </div>
             </div>
         </main>
-        <!-- Exam Modal -->
-<div class="modal-overlay" id="examModal">
+<!-- Modal HTML Structure -->
+<div id="examModal" class="modal-overlay">
     <div class="modal-container">
         <div class="modal-header">
-            <h3 class="modal-title" id="modalTitle">ข้อมูลการสอบ</h3>
-            <button class="modal-close" id="closeModal">
-                <i class="fas fa-times"></i>
-            </button>
+            <h2 id="modalTitle" class="modal-title">ข้อมูลวิชา</h2>
+            <button id="closeModal" class="modal-close">&times;</button>
         </div>
         <div class="modal-body">
             <div class="subject-details">
-                <div class="subject-code" id="modalSubjectCode">954140</div>
-                <div class="subject-name" id="modalSubjectName">Information Technology Literacy</div>
+                <div id="modalSubjectCode" class="subject-code"></div>
+                <div id="modalSubjectName" class="subject-name"></div>
+                <div id="modalTeacherName" class="teacher-name"></div>
             </div>
-            
             <div class="exam-schedule">
                 <div class="exam-item midterm">
                     <div class="exam-header">
-                        <i class="fas fa-calendar-alt"></i>
+                        <i class="fas fa-clock"></i>
                         <h4>สอบกลางภาค</h4>
                     </div>
-                    <div class="exam-details" id="midtermDetails">
-                        <div class="exam-date">ติดตามจากผู้สอน</div>
+                    <div class="exam-details">
+                        <div id="midtermDetails"></div>
                     </div>
                 </div>
-                
                 <div class="exam-item final">
                     <div class="exam-header">
                         <i class="fas fa-calendar-check"></i>
                         <h4>สอบปลายภาค</h4>
                     </div>
-                    <div class="exam-details" id="finalDetails">
-                        <div class="exam-date">Sat 25 Oct 2025 08:00-11:00</div>
+                    <div class="exam-details">
+                        <div id="finalDetails"></div>
                     </div>
                 </div>
             </div>
@@ -576,34 +573,42 @@
     </script>
     <script>
 // เพิ่มข้อมูลการสอบ
+
+// เพิ่มข้อมูลการสอบพร้อมชื่ออาจารย์ผู้สอน
 const examData = {
     '001101': {
         name: 'Fundamental English 1',
+        teacher: 'Staff',
         midterm: 'จันทร์ที่ 25 สิงหาคม 2568 เวลา 12:00-15:00',
         final: 'จันทร์ที่ 20 ตุลาคม 2568 เวลา 12:00-15:00'
     },
     '140104': {
         name: 'Citizenship',
+        teacher: 'Pailin Phujeenaphan',
         midterm: 'พุธที่ 27 สิงหาคม 2568 เวลา 12:00-15:00',
         final: 'อังคารที่ 21 ตุลาคม 2568 เวลา 12:00-15:00'
     },
     '368100': {
         name: 'Starting an Agribusiness in a Changing World',
+        teacher: 'Kannika Saeliw (Mango)',
         midterm: 'ติดตามจากผู้สอน',
         final: 'ไม่มีสอบ Regular หรือยังไม่ประกาศ'
     },
     '954100': {
-        name: 'Information System for Organization',
+        name: 'Information System for Organization Management',
+        teacher: 'Orawit Thinnukool',
         midterm: 'ติดตามจากผู้สอน',
         final: 'อาทิตย์ที่ 26 ตุลาคม 2568 เวลา 12:00-15:00'
     },
     '954140': {
         name: 'Information Technology Literacy',
+        teacher: 'Porntida Kaewkamol',
         midterm: 'ติดตามจากผู้สอน',
         final: 'เสาร์ที่ 25 ตุลาคม 2568 เวลา 08:00-11:00'
     },
     '954142': {
-        name: 'Fundamental Computer Programming',
+        name: 'Fundamental Computer Programming for Modern Management',
+        teacher: 'Porntida Kaewkamol',
         midterm: 'ติดตามจากผู้สอน',
         final: 'พุธที่ 29 ตุลาคม 2568 เวลา 15:30-18:30'
     }
@@ -615,15 +620,17 @@ function openExamModal(subjectCode) {
     const modalTitle = document.getElementById('modalTitle');
     const modalSubjectCode = document.getElementById('modalSubjectCode');
     const modalSubjectName = document.getElementById('modalSubjectName');
+    const modalTeacherName = document.getElementById('modalTeacherName');
     const midtermDetails = document.getElementById('midtermDetails');
     const finalDetails = document.getElementById('finalDetails');
     
     const subject = examData[subjectCode];
     
     if (subject) {
-        modalTitle.textContent = 'ข้อมูลการสอบ';
+        modalTitle.textContent = 'ข้อมูลวิชา';
         modalSubjectCode.textContent = subjectCode;
         modalSubjectName.textContent = subject.name;
+        modalTeacherName.textContent = subject.teacher;
         
         midtermDetails.innerHTML = `<div class="exam-date">${subject.midterm}</div>`;
         finalDetails.innerHTML = `<div class="exam-date">${subject.final}</div>`;
