@@ -6,319 +6,522 @@
     <title>MMIT Study Plan</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="header-section">
-            <div class="title-wrapper">
-                <i class="fas fa-graduation-cap title-icon"></i>
-                <h1 class="main-title">MMIT Study Plan</h1>
-            </div>
-            <div class="subtitle">CAMT</div>
-            <div class="subtitle">Academic Schedule • ภาคเรียนที่ 1/2568</div>
-        </div>
-        
-        <div class="schedule-wrapper">
-            <div class="schedule-grid">
-                <!-- วันจันทร์ -->
-                <div class="day-section" data-day="monday">
-                    <div class="day-header">
-                        <i class="fas fa-calendar-day day-icon"></i>
-                        <span>จันทร์</span>
-                        <span class="day-english">Monday</span>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            8:00 - 10:00
-                        </div>
-                        <div class="subject it-literacy">
-                            <div class="subject-header">
-                                <i class="fas fa-laptop-code subject-icon"></i>
-                                <div class="subject-name">Information Technology Literacy</div>
-                            </div>
-                            <div class="subject-code">954140 (002-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: ILC-C308
-                            </div>        
-                        </div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            9:00 - 12:00
-                        </div>
-                        <div class="subject it-literacy-time2">
-                            <div class="subject-header">
-                                <i class="fas fa-laptop-code subject-icon"></i>
-                                <div class="subject-name">Information Technology Literacy [Time2]</div>
-                            </div>
-                            <div class="subject-code">954140 (002-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: ILC-C308
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            13:00 - 14:30
-                        </div>
-                        <div class="subject citizenship clickable" data-link="https://teams.microsoft.com/l/meetup-join/19%3a13fde6663c2843fbabf5a6f32ada75f6%40thread.tacv2/1750574825353?context=%7b%22Tid%22%3a%22cf81f1df-de59-4c29-91da-a2dfd04aa751%22%2c%22Oid%22%3a%228b7c80d7-7470-4759-87dc-030eddcef9e1%22%7d">
-                            <div class="subject-header">
-                                <i class="fas fa-users subject-icon"></i>
-                                <div class="subject-name">Citizenship</div>
-                                <i class="fas fa-external-link-alt link-icon"></i>
-                            </div>
-                            <div class="subject-code">140104 (003-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-video"></i>
-                                Room: Online
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            14:30 - 16:00
-                        </div>
-                        <div class="subject fundamental-eng">
-                            <div class="subject-header">
-                                <i class="fas fa-language subject-icon"></i>
-                                <div class="subject-name">Fundamental English 1</div>
-                            </div>
-                            <div class="subject-code">001101 (040-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: RB5205
-                            </div>
-                        </div>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-graduation-cap logo-icon"></i>
+                    <div class="title-group">
+                        <h1 class="main-title">MMIT Study Plan</h1>
+                        <p class="subtitle">CAMT - ภาคเรียนที่ 1/2568</p>
                     </div>
                 </div>
-                
-
-                <!-- วันอังคาร -->
-                <div class="day-section" data-day="tuesday">
-                    <div class="day-header">
-                        <i class="fas fa-calendar-day day-icon"></i>
-                        <span>อังคาร</span>
-                        <span class="day-english">Tuesday</span>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            11:00 - 12:30
-                        </div>
-                        <div class="subject info-system">
-                            <div class="subject-header">
-                                <i class="fas fa-database subject-icon"></i>
-                                <div class="subject-name">Information System for Organization</div>
-                            </div>
-                            <div class="subject-code">954100 (002-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: ILC-B204
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- วันพุธ -->
-                <div class="day-section" data-day="wednesday">
-                    <div class="day-header">
-                        <i class="fas fa-calendar-day day-icon"></i>
-                        <span>พุธ</span>
-                        <span class="day-english">Wednesday</span>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            9:00 - 12:00
-                        </div>
-                        <div class="subject agribusiness clickable" data-link="https://mango-cmu.instructure.com/courses/19845">
-                            <div class="subject-header">
-                                <i class="fas fa-seedling subject-icon"></i>
-                                <div class="subject-name">Agribusiness</div>
-                                <i class="fas fa-external-link-alt link-icon"></i>
-                            </div>
-                            <div class="subject-code">368100 (001-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-video"></i>
-                                Room: Online (Mango)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- วันพฤหัสบดี -->
-                <div class="day-section" data-day="thursday">
-                    <div class="day-header">
-                        <i class="fas fa-calendar-day day-icon"></i>
-                        <span>พฤหัสบดี</span>
-                        <span class="day-english">Thursday</span>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            13:00 - 14:30
-                        </div>
-                        <div class="subject citizenship clickable" data-link="https://teams.microsoft.com/l/meetup-join/19%3a13fde6663c2843fbabf5a6f32ada75f6%40thread.tacv2/1750574825353?context=%7b%22Tid%22%3a%22cf81f1df-de59-4c29-91da-a2dfd04aa751%22%2c%22Oid%22%3a%228b7c80d7-7470-4759-87dc-030eddcef9e1%22%7d">
-                            <div class="subject-header">
-                                <i class="fas fa-users subject-icon"></i>
-                                <div class="subject-name">Citizenship</div>
-                                <i class="fas fa-external-link-alt link-icon"></i>
-                            </div>
-                            <div class="subject-code">140104 (003-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-video"></i>
-                                Room: Online
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            14:30 - 16:00
-                        </div>
-                        <div class="subject fundamental-eng">
-                            <div class="subject-header">
-                                <i class="fas fa-language subject-icon"></i>
-                                <div class="subject-name">Fundamental English 1</div>
-                            </div>
-                            <div class="subject-code">001101 (040-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: RB5205
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- วันศุกร์ -->
-                <div class="day-section" data-day="friday">
-                    <div class="day-header">
-                        <i class="fas fa-calendar-day day-icon"></i>
-                        <span>ศุกร์</span>
-                        <span class="day-english">Friday</span>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            11:00 - 12:30
-                        </div>
-                        <div class="subject info-system-2">
-                            <div class="subject-header">
-                                <i class="fas fa-database subject-icon"></i>
-                                <div class="subject-name">Information System for Organization</div>
-                            </div>
-                            <div class="subject-code">954100 (002-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: ILC-B204
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            13:00 - 15:00
-                        </div>
-                        <div class="subject programming">
-                            <div class="subject-header">
-                                <i class="fas fa-code subject-icon"></i>
-                                <div class="subject-name">Fundamental Computer Programming</div>
-                            </div>
-                            <div class="subject-code">954142 (002-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: ILC-C207
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-slot">
-                        <div class="time">
-                            <i class="far fa-clock"></i>
-                            15:00 - 17:00
-                        </div>
-                        <div class="subject programming-2">
-                            <div class="subject-header">
-                                <i class="fas fa-code subject-icon"></i>
-                                <div class="subject-name">Fundamental Computer Programming</div>
-                            </div>
-                            <div class="subject-code">954142 (002-000)</div>
-                            <div class="subject-room">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Room: ILC-C207
-                            </div>
-                        </div>
-                    </div>
+                <div class="current-info">
+                    <div class="current-day" id="currentDay">Today</div>
+                    <div class="current-time" id="currentTime">00:00</div>
                 </div>
             </div>
-        </div>
+        </header>
+
+        <!-- Quick Navigation -->
+        <nav class="quick-nav">
+            <button class="nav-btn active" data-view="week">
+                <i class="fas fa-calendar-week"></i>
+                <span>สัปดาห์</span>
+            </button>
+            <button class="nav-btn" data-view="today">
+                <i class="fas fa-calendar-day"></i>
+                <span>วันนี้</span>
+            </button>
+            <button class="nav-btn" data-view="list">
+                <i class="fas fa-list"></i>
+                <span>รายการ</span>
+            </button>
+        </nav>
+
+        <!-- Schedule Container -->
+        <main class="schedule-container">
+            <!-- Week View -->
+            <div class="schedule-view week-view active" id="weekView">
+                <div class="schedule-grid">
+                    <!-- Monday -->
+                    <div class="day-card" data-day="monday">
+                        <div class="day-header">
+                            <div class="day-info">
+                                <h3 class="day-name">จันทร์</h3>
+                                <span class="day-english">Monday</span>
+                            </div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="classes-list">
+                            <div class="class-item">
+                                <div class="time-badge">08:00-10:00</div>
+                                <div class="subject it-literacy">
+                                    <div class="subject-info">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <div>
+                                            <h4>Information Technology Literacy</h4>
+                                            <span class="code">954140 (002-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        ILC-C308
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-item">
+                                <div class="time-badge">09:00-12:00</div>
+                                <div class="subject it-literacy-lab">
+                                    <div class="subject-info">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <div>
+                                            <h4>IT Literacy [Lab]</h4>
+                                            <span class="code">954140 (002-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        ILC-C308
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-item">
+                                <div class="time-badge">13:00-14:30</div>
+                                <div class="subject citizenship clickable" data-link="https://teams.microsoft.com/l/meetup-join/19%3a13fde6663c2843fbabf5a6f32ada75f6%40thread.tacv2/1750574825353?context=%7b%22Tid%22%3a%22cf81f1df-de59-4c29-91da-a2dfd04aa751%22%2c%22Oid%22%3a%228b7c80d7-7470-4759-87dc-030eddcef9e1%22%7d">
+                                    <div class="subject-info">
+                                        <i class="fas fa-users"></i>
+                                        <div>
+                                            <h4>Citizenship</h4>
+                                            <span class="code">140104 (003-000)</span>
+                                        </div>
+                                        <i class="fas fa-external-link-alt link-icon"></i>
+                                    </div>
+                                    <div class="location online">
+                                        <i class="fas fa-video"></i>
+                                        Online
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-item">
+                                <div class="time-badge">14:30-16:00</div>
+                                <div class="subject english">
+                                    <div class="subject-info">
+                                        <i class="fas fa-language"></i>
+                                        <div>
+                                            <h4>Fundamental English 1</h4>
+                                            <span class="code">001101 (040-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        RB5205
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="day-card" data-day="tuesday">
+                        <div class="day-header">
+                            <div class="day-info">
+                                <h3 class="day-name">อังคาร</h3>
+                                <span class="day-english">Tuesday</span>
+                            </div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="classes-list">
+                            <div class="class-item">
+                                <div class="time-badge">11:00-12:30</div>
+                                <div class="subject info-system">
+                                    <div class="subject-info">
+                                        <i class="fas fa-database"></i>
+                                        <div>
+                                            <h4>Information System for Organization</h4>
+                                            <span class="code">954100 (002-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        ILC-B204
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="day-card" data-day="wednesday">
+                        <div class="day-header">
+                            <div class="day-info">
+                                <h3 class="day-name">พุธ</h3>
+                                <span class="day-english">Wednesday</span>
+                            </div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="classes-list">
+                            <div class="class-item">
+                                <div class="time-badge">09:00-12:00</div>
+                                <div class="subject agribusiness clickable" data-link="https://mango-cmu.instructure.com/courses/19845">
+                                    <div class="subject-info">
+                                        <i class="fas fa-seedling"></i>
+                                        <div>
+                                            <h4>Agribusiness</h4>
+                                            <span class="code">368100 (001-000)</span>
+                                        </div>
+                                        <i class="fas fa-external-link-alt link-icon"></i>
+                                    </div>
+                                    <div class="location online">
+                                        <i class="fas fa-video"></i>
+                                        Online (Mango)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="day-card" data-day="thursday">
+                        <div class="day-header">
+                            <div class="day-info">
+                                <h3 class="day-name">พฤหัสบดี</h3>
+                                <span class="day-english">Thursday</span>
+                            </div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="classes-list">
+                            <div class="class-item">
+                                <div class="time-badge">13:00-14:30</div>
+                                <div class="subject citizenship clickable" data-link="https://teams.microsoft.com/l/meetup-join/19%3a13fde6663c2843fbabf5a6f32ada75f6%40thread.tacv2/1750574825353?context=%7b%22Tid%22%3a%22cf81f1df-de59-4c29-91da-a2dfd04aa751%22%2c%22Oid%22%3a%228b7c80d7-7470-4759-87dc-030eddcef9e1%22%7d">
+                                    <div class="subject-info">
+                                        <i class="fas fa-users"></i>
+                                        <div>
+                                            <h4>Citizenship</h4>
+                                            <span class="code">140104 (003-000)</span>
+                                        </div>
+                                        <i class="fas fa-external-link-alt link-icon"></i>
+                                    </div>
+                                    <div class="location online">
+                                        <i class="fas fa-video"></i>
+                                        Online
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-item">
+                                <div class="time-badge">14:30-16:00</div>
+                                <div class="subject english">
+                                    <div class="subject-info">
+                                        <i class="fas fa-language"></i>
+                                        <div>
+                                            <h4>Fundamental English 1</h4>
+                                            <span class="code">001101 (040-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        RB5205
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="day-card" data-day="friday">
+                        <div class="day-header">
+                            <div class="day-info">
+                                <h3 class="day-name">ศุกร์</h3>
+                                <span class="day-english">Friday</span>
+                            </div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="classes-list">
+                            <div class="class-item">
+                                <div class="time-badge">11:00-12:30</div>
+                                <div class="subject info-system">
+                                    <div class="subject-info">
+                                        <i class="fas fa-database"></i>
+                                        <div>
+                                            <h4>Information System for Organization</h4>
+                                            <span class="code">954100 (002-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        ILC-B204
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-item">
+                                <div class="time-badge">13:00-15:00</div>
+                                <div class="subject programming">
+                                    <div class="subject-info">
+                                        <i class="fas fa-code"></i>
+                                        <div>
+                                            <h4>Fundamental Computer Programming</h4>
+                                            <span class="code">954142 (002-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        ILC-C207
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-item">
+                                <div class="time-badge">15:00-17:00</div>
+                                <div class="subject programming-lab">
+                                    <div class="subject-info">
+                                        <i class="fas fa-code"></i>
+                                        <div>
+                                            <h4>Programming [Lab]</h4>
+                                            <span class="code">954142 (002-000)</span>
+                                        </div>
+                                    </div>
+                                    <div class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        ILC-C207
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Today View -->
+            <div class="schedule-view today-view" id="todayView">
+                <div class="today-container">
+                    <div class="today-header">
+                        <h2 id="todayTitle">วันนี้</h2>
+                        <p id="todayDate">Loading...</p>
+                    </div>
+                    <div class="today-classes" id="todayClasses">
+                        <!-- Today's classes will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- List View -->
+            <div class="schedule-view list-view" id="listView">
+                <div class="list-container">
+                    <div class="subject-summary">
+                        <h2>สรุปรายวิชา</h2>
+                        <div class="summary-grid">
+                            <div class="summary-item it-literacy">
+                                <i class="fas fa-laptop-code"></i>
+                                <div>
+                                    <h4>Information Technology Literacy</h4>
+                                    <span>954140 • จันทร์ 8:00-12:00</span>
+                                </div>
+                            </div>
+                            <div class="summary-item citizenship">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <h4>Citizenship</h4>
+                                    <span>140104 • จันทร์, พฤหัส 13:00-14:30</span>
+                                </div>
+                            </div>
+                            <div class="summary-item english">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <h4>Fundamental English 1</h4>
+                                    <span>001101 • จันทร์, พฤหัส 14:30-16:00</span>
+                                </div>
+                            </div>
+                            <div class="summary-item info-system">
+                                <i class="fas fa-database"></i>
+                                <div>
+                                    <h4>Information System for Organization</h4>
+                                    <span>954100 • อังคาร, ศุกร์ 11:00-12:30</span>
+                                </div>
+                            </div>
+                            <div class="summary-item agribusiness">
+                                <i class="fas fa-seedling"></i>
+                                <div>
+                                    <h4>Agribusiness</h4>
+                                    <span>368100 • พุธ 9:00-12:00</span>
+                                </div>
+                            </div>
+                            <div class="summary-item programming">
+                                <i class="fas fa-code"></i>
+                                <div>
+                                    <h4>Fundamental Computer Programming</h4>
+                                    <span>954142 • ศุกร์ 13:00-17:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
     <script>
-        // Add floating animation on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const daySection = document.querySelectorAll('.day-section');
+        // Current time and day display
+        function updateCurrentTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('th-TH', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false 
+            });
+            const dayString = now.toLocaleDateString('th-TH', { weekday: 'long' });
             
-            daySection.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.1}s`;
-                section.classList.add('fade-in-up');
+            document.getElementById('currentTime').textContent = timeString;
+            document.getElementById('currentDay').textContent = dayString;
+        }
+
+        // Update current day indicator
+        function updateCurrentDayIndicator() {
+            const today = new Date().getDay();
+            const dayMap = {
+                1: 'monday',
+                2: 'tuesday', 
+                3: 'wednesday',
+                4: 'thursday',
+                5: 'friday'
+            };
+
+            // Remove previous current day classes
+            document.querySelectorAll('.day-card').forEach(card => {
+                card.classList.remove('current-day');
             });
 
-            // Add click ripple effect
-            const subjects = document.querySelectorAll('.subject');
-            subjects.forEach(subject => {
-                subject.addEventListener('click', function(e) {
-                    // Check if subject has a link
-                    const link = this.getAttribute('data-link');
-                    if (link && link.trim() !== '') {
-                        window.open(link, '_blank');
-                        return;
-                    }
+            // Add current day class
+            if (dayMap[today]) {
+                const currentDayCard = document.querySelector(`[data-day="${dayMap[today]}"]`);
+                if (currentDayCard) {
+                    currentDayCard.classList.add('current-day');
+                }
+            }
+        }
 
-                    // Add ripple effect for non-clickable subjects
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
+        // Navigation functionality
+        function initializeNavigation() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const scheduleViews = document.querySelectorAll('.schedule-view');
+
+            navButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetView = btn.getAttribute('data-view');
                     
-                    ripple.style.width = ripple.style.height = size + 'px';
-                    ripple.style.left = x + 'px';
-                    ripple.style.top = y + 'px';
-                    ripple.classList.add('ripple');
+                    // Update active button
+                    navButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
                     
-                    this.appendChild(ripple);
+                    // Update active view
+                    scheduleViews.forEach(view => view.classList.remove('active'));
+                    document.getElementById(targetView + 'View').classList.add('active');
                     
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
+                    // Special handling for today view
+                    if (targetView === 'today') {
+                        updateTodayView();
+                    }
                 });
             });
+        }
+
+        // Update today view
+        function updateTodayView() {
+            const today = new Date();
+            const dayMap = {
+                1: 'monday',
+                2: 'tuesday', 
+                3: 'wednesday',
+                4: 'thursday',
+                5: 'friday'
+            };
+
+            const todayKey = dayMap[today.getDay()];
+            const todayTitle = document.getElementById('todayTitle');
+            const todayDate = document.getElementById('todayDate');
+            const todayClasses = document.getElementById('todayClasses');
+
+            todayTitle.textContent = today.toLocaleDateString('th-TH', { weekday: 'long' });
+            todayDate.textContent = today.toLocaleDateString('th-TH', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+
+            if (todayKey) {
+                const todayCard = document.querySelector(`[data-day="${todayKey}"]`);
+                if (todayCard) {
+                    const classes = todayCard.querySelector('.classes-list').cloneNode(true);
+                    todayClasses.innerHTML = '';
+                    todayClasses.appendChild(classes);
+                } else {
+                    todayClasses.innerHTML = '<div class="no-classes">ไม่มีคลาสเรียนวันนี้</div>';
+                }
+            } else {
+                todayClasses.innerHTML = '<div class="no-classes">ไม่มีคลาสเรียนวันนี้</div>';
+            }
+        }
+
+        // Click handlers for subjects
+        function initializeClickHandlers() {
+            document.addEventListener('click', (e) => {
+                const clickableSubject = e.target.closest('.subject.clickable');
+                if (clickableSubject) {
+                    const link = clickableSubject.getAttribute('data-link');
+                    if (link) {
+                        window.open(link, '_blank');
+                    }
+                }
+            });
+        }
+
+        // Touch feedback for mobile
+        function initializeTouchFeedback() {
+            document.querySelectorAll('.subject, .nav-btn').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.95)';
+                });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.transform = '';
+                });
+            });
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCurrentTime();
+            updateCurrentDayIndicator();
+            initializeNavigation();
+            initializeClickHandlers();
+            initializeTouchFeedback();
+            
+            // Update time every minute
+            setInterval(updateCurrentTime, 60000);
+            
+            // Update current day at midnight
+            setInterval(updateCurrentDayIndicator, 60000);
         });
 
-        // Add pulse animation to current day
-        const today = new Date().getDay();
-        const dayMap = {
-            1: 'monday',
-            2: 'tuesday', 
-            3: 'wednesday',
-            4: 'thursday',
-            5: 'friday'
-        };
-
-        if (dayMap[today]) {
-            const currentDay = document.querySelector(`[data-day="${dayMap[today]}"]`);
-            if (currentDay) {
-                currentDay.classList.add('current-day');
-            }
+        // Service Worker registration for PWA capabilities
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('ServiceWorker registration successful');
+                }, function(err) {
+                    console.log('ServiceWorker registration failed: ', err);
+                });
+            });
         }
     </script>
 </body>
