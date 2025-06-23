@@ -716,6 +716,19 @@ body {
         flex-direction: column;
         gap: 0.75rem;
     }
+
+     .subject {
+    flex: 1;        /* ให้ยืดเต็ม */
+    min-width: 0;   /* เพื่อให้ย่อขนาดได้ */
+    width: 100%;    /* ครอบคลุมเต็มพื้นที่ container */
+  }
+  
+  .class-item {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    align-items: flex-start;
+  }
     
     .time-badge {
         align-self: flex-start;
