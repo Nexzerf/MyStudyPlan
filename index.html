@@ -367,6 +367,45 @@
                 </div>
             </div>
         </main>
+        <!-- Exam Modal -->
+<div class="modal-overlay" id="examModal">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modalTitle">ข้อมูลการสอบ</h3>
+            <button class="modal-close" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="subject-details">
+                <div class="subject-code" id="modalSubjectCode">954140</div>
+                <div class="subject-name" id="modalSubjectName">Information Technology Literacy</div>
+            </div>
+            
+            <div class="exam-schedule">
+                <div class="exam-item midterm">
+                    <div class="exam-header">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>สอบกลางภาค</h4>
+                    </div>
+                    <div class="exam-details" id="midtermDetails">
+                        <div class="exam-date">ติดตามจากผู้สอน</div>
+                    </div>
+                </div>
+                
+                <div class="exam-item final">
+                    <div class="exam-header">
+                        <i class="fas fa-calendar-check"></i>
+                        <h4>สอบปลายภาค</h4>
+                    </div>
+                    <div class="exam-details" id="finalDetails">
+                        <div class="exam-date">Sat 25 Oct 2025 08:00-11:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 
     <script>
@@ -522,5 +561,103 @@
             });
         }
     </script>
+    <script>
+// เพิ่มข้อมูลการสอบ
+const examData = {
+    '001101': {
+        name: 'Fundamental English 1',
+        midterm: 'จันทร์ที่ 25 สิงหาคม 2568 เวลา 12:00-15:00',
+        final: 'จันทร์ที่ 20 ตุลาคม 2568 เวลา 12:00-15:00'
+    },
+    '140104': {
+        name: 'Citizenship',
+        midterm: 'พุธที่ 27 สิงหาคม 2568 เวลา 12:00-15:00',
+        final: 'อังคารที่ 21 ตุลาคม 2568 เวลา 12:00-15:00'
+    },
+    '368100': {
+        name: 'Starting an Agribusiness in a Changing World',
+        midterm: 'ติดตามจากผู้สอน',
+        final: 'ไม่มีสอบ Regular หรือยังไม่ประกาศ'
+    },
+    '954100': {
+        name: 'Information System for Organization',
+        midterm: 'ติดตามจากผู้สอน',
+        final: 'อาทิตย์ที่ 26 ตุลาคม 2568 เวลา 12:00-15:00'
+    },
+    '954140': {
+        name: 'Information Technology Literacy',
+        midterm: 'ติดตามจากผู้สอน',
+        final: 'เสาร์ที่ 25 ตุลาคม 2568 เวลา 08:00-11:00'
+    },
+    '954142': {
+        name: 'Fundamental Computer Programming',
+        midterm: 'ติดตามจากผู้สอน',
+        final: 'พุธที่ 29 ตุลาคม 2568 เวลา 15:30-18:30'
+    }
+};
+
+// ฟังก์ชันเปิด Modal
+function openExamModal(subjectCode) {
+    const modal = document.getElementById('examModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubjectCode = document.getElementById('modalSubjectCode');
+    const modalSubjectName = document.getElementById('modalSubjectName');
+    const midtermDetails = document.getElementById('midtermDetails');
+    const finalDetails = document.getElementById('finalDetails');
+    
+    const subject = examData[subjectCode];
+    
+    if (subject) {
+        modalTitle.textContent = 'ข้อมูลการสอบ';
+        modalSubjectCode.textContent = subjectCode;
+        modalSubjectName.textContent = subject.name;
+        
+        midtermDetails.innerHTML = `<div class="exam-date">${subject.midterm}</div>`;
+        finalDetails.innerHTML = `<div class="exam-date">${subject.final}</div>`;
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// ฟังก์ชันปิด Modal
+function closeExamModal() {
+    const modal = document.getElementById('examModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// เพิ่มในฟังก์ชัน DOMContentLoaded ที่มีอยู่แล้ว
+document.addEventListener('DOMContentLoaded', function() {
+    // ... โค้ดเดิมที่มีอยู่แล้ว ...
+    
+    // เพิ่ม Event Listeners สำหรับ Modal
+    const closeModalBtn = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('examModal');
+    
+    closeModalBtn.addEventListener('click', closeExamModal);
+    
+    modalOverlay.addEventListener('click', function(e) {
+        if (e.target === modalOverlay) {
+            closeExamModal();
+        }
+    });
+    
+    // เพิ่ม Event Listeners สำหรับ summary items
+    document.querySelectorAll('.summary-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const subjectCode = this.querySelector('span').textContent.split(' • ')[0];
+            openExamModal(subjectCode);
+        });
+    });
+    
+    // ESC key เพื่อปิด Modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeExamModal();
+        }
+    });
+});
+</script>
 </body>
 </html>
